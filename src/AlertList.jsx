@@ -130,12 +130,12 @@ const AlertList = ({ onEdit }) => {
 
                             <Select
                                 fullWidth
-                                value={editAlert?.hit_side !== undefined ? editAlert.hit_side : "UPSIDE"}
+                                value={editAlert?.hit_side !== undefined ? editAlert.hit_side : "BUY"}
                                 onChange={(e) => handleEditChange("hit_side", e.target.value)}
                             >
                                 <MenuItem value="" disabled>Select Hit Side</MenuItem>
-                                <MenuItem value="UPSIDE">UPSIDE</MenuItem>
-                                <MenuItem value="DOWN_SIDE">DOWN SIDE</MenuItem>
+                                <MenuItem value="BUY">BUY</MenuItem>
+                                <MenuItem value="SHORT">SHORT</MenuItem>
                             </Select>
 
                             <TextField
@@ -173,7 +173,7 @@ const AlertList = ({ onEdit }) => {
                                     variant="subtitle2"
                                     fontWeight="bold"
                                     sx={{
-                                        color: alert.hit_side === "above" ? "green" : "red",
+                                        color: alert.hit_side === "BUY" ? "green" : "red",
                                         textTransform: "uppercase"
                                     }}
                                 >

@@ -34,7 +34,7 @@ export default function App() {
     const [alerts, setAlerts] = useState([]);
     const [stockName, setStockName] = useState("");
     const [price, setPrice] = useState(0);
-    const [direction, setDirection] = useState("LOWER");
+    const [direction, setDirection] = useState("SHORT");
     const [comment, setComment] = useState("");  // Added comment state
     const [tab, setTab] = useState(0);
     const [editIndex, setEditIndex] = useState(null);
@@ -74,7 +74,7 @@ export default function App() {
 
         setStockName("");
         setPrice(0);
-        setDirection("above");
+        setDirection("BUY");
         setComment(""); // Clear comment after submission
 
         // Hide the alert after 2 seconds
@@ -158,8 +158,8 @@ export default function App() {
 
                             <Stack direction="row" spacing={1} alignItems="center">
                                 <Select value={direction} onChange={(e) => setDirection(e.target.value)} size="small" sx={{ minWidth: 100, height: 48, fontWeight: 500 }}>
-                                    <MenuItem value="UPSIDE">UPSIDE</MenuItem>
-                                    <MenuItem value="DOWN_SIDE">DOWN SIDE</MenuItem>
+                                    <MenuItem value="BUY">BUY</MenuItem>
+                                    <MenuItem value="SHORT">SHORT</MenuItem>
                                 </Select>
 
                                 <Box display="flex" alignItems="center" border="1px solid #ccc" borderRadius="8px" overflow="hidden" flexGrow={1} height={48}>
