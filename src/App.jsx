@@ -43,15 +43,6 @@ export default function App() {
     const [isError, setIsError] = useState(false); // To store if the message is an error
     const [isAlertVisible, setIsAlertVisible] = useState(false); // Control visibility of the alert
 
-    // const stockOptions = [
-    //     "NIFTY",
-    //     "BANKNIFTY",
-    //     "FINNIFTY",
-    //     "SENSEX",
-    //     "LICHSGFIN",
-    //     "DABUR",
-    // ];
-
     const handleCreateOrUpdateAlert = async () => {
         if (!stockName || !price) return;
 
@@ -167,8 +158,8 @@ export default function App() {
 
                             <Stack direction="row" spacing={1} alignItems="center">
                                 <Select value={direction} onChange={(e) => setDirection(e.target.value)} size="small" sx={{ minWidth: 100, height: 48, fontWeight: 500 }}>
-                                    <MenuItem value="UPPER">Above</MenuItem>
-                                    <MenuItem value="LOWER">Below</MenuItem>
+                                    <MenuItem value="UPSIDE">UPSIDE</MenuItem>
+                                    <MenuItem value="DOWN_SIDE">DOWN SIDE</MenuItem>
                                 </Select>
 
                                 <Box display="flex" alignItems="center" border="1px solid #ccc" borderRadius="8px" overflow="hidden" flexGrow={1} height={48}>

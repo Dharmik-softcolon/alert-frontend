@@ -130,12 +130,12 @@ const AlertList = ({ onEdit }) => {
 
                             <Select
                                 fullWidth
-                                value={editAlert?.hit_side !== undefined ? editAlert.hit_side : "UPPER"}
+                                value={editAlert?.hit_side !== undefined ? editAlert.hit_side : "UPSIDE"}
                                 onChange={(e) => handleEditChange("hit_side", e.target.value)}
                             >
                                 <MenuItem value="" disabled>Select Hit Side</MenuItem>
-                                <MenuItem value="UPPER">UPPER</MenuItem>
-                                <MenuItem value="LOWER">LOWER</MenuItem>
+                                <MenuItem value="UPSIDE">UPSIDE</MenuItem>
+                                <MenuItem value="DOWN_SIDE">DOWN SIDE</MenuItem>
                             </Select>
 
                             <TextField
