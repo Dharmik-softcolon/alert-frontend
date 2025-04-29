@@ -1,26 +1,26 @@
 // api/alertApi.js
 import axios from "axios";
-import {baseUrl} from "../config/config";
+// import {baseUrl} from "../config/config";
 
 export const fetchAlerts = async () => {
-    const response = await axios.get(`${baseUrl}/stocks/alert/get-all`);
+    const response = await axios.get(`https://alert-backend-i0wx.onrender.com/stocks/alert/get-all`);
     return response.data;
 };
 
 export const deleteAlert = async (id) => {
-    const response = await axios.delete(`${baseUrl}/stocks/alert/delete/${id}`);
+    const response = await axios.delete(`https://alert-backend-i0wx.onrender.com/stocks/alert/delete/${id}`);
     return response.data;
 };
 
 export const updateAlert = async (id, updatedData) => {
-        const response = await axios.put(`${baseUrl}/stocks/alert/update/${id}`, updatedData);
+        const response = await axios.put(`https://alert-backend-i0wx.onrender.com/stocks/alert/update/${id}`, updatedData);
         return response.data;
 };
 
 export const createAlert = async (alertData) => {
     console.log(alertData)
     try {
-        const response = await axios.post(`${baseUrl}/stocks/alert/create`, alertData, {
+        const response = await axios.post(`https://alert-backend-i0wx.onrender.com/stocks/alert/create`, alertData, {
             headers: {
                 'Content-Type': 'application/json',
             },
