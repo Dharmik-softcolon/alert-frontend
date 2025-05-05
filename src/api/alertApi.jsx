@@ -32,5 +32,37 @@ export const createAlert = async (alertData) => {
         throw new Error(error.response?.data?.message || "Failed to create alert");
     }
 };
+// ---------------------------------------
+// export const fetchAlerts = async () => {
+//     const response = await axios.get(`http://localhost:5005/stocks/alert/get-all`);
+//     return response.data;
+// };
+//
+// export const deleteAlert = async (id) => {
+//     const response = await axios.delete(`http://localhost:5005/stocks/alert/delete/${id}`);
+//     return response.data;
+// };
+//
+// export const updateAlert = async (id, updatedData) => {
+//     const response = await axios.put(`http://localhost:5005/stocks/alert/update/${id}`, updatedData);
+//     return response.data;
+// };
+//
+// export const createAlert = async (alertData) => {
+//     console.log(alertData)
+//     try {
+//         const response = await axios.post(`http://localhost:5005/stocks/alert/create`, alertData, {
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//         });
+//
+//         return response.data;
+//     } catch (error) {
+//         console.error("Error in createAlert:", error.response?.data?.message || error.message);
+//         throw new Error(error.response?.data?.message || "Failed to create alert");
+//     }
+// };
+
 
 

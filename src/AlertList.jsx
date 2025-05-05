@@ -13,6 +13,7 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { fetchAlerts, deleteAlert, updateAlert } from "./api/alertApi";
+// import { io } from 'socket.io-client';
 
 const AlertList = ({ onEdit }) => {
     const [alerts, setAlerts] = useState([]);
@@ -20,6 +21,23 @@ const AlertList = ({ onEdit }) => {
     const [error, setError] = useState(null);
     const [editAlert, setEditAlert] = useState(null);
     const [updating, setUpdating] = useState(false);
+
+    // --------------->
+    //     let socket;
+    //     socket = io("http://localhost:5005/", {
+    //         transports: ['websocket'],
+    //         rejectUnauthorized: false,
+    //     });
+    //
+    //     socket.on('connect', async () => {
+    //         console.log('Connected to socket server');
+    //     });
+    //
+    // socket.on('alertMatched', async () => {
+    //     console.log('Connected to socket server');
+    // });
+
+        // --------------->
 
     useEffect(() => {
         const getAlerts = async () => {
